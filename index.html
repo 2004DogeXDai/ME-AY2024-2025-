@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ME AY2024/2025 全国高校生源分布热力图</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        .chart-container {
+            width: 100%;
+            height: 600px;
+            border: 2px solid #ecf0f1;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .stat-number {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .stat-label {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        .info-section {
+            background-color: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+        .school-ranking {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .school-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .rank {
+            font-weight: bold;
+            color: #3498db;
+        }
+        .school-name {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .count {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎓 ME AY2024/2025 全国高校生源分布热力图</h1>
+        <p class="subtitle">📊 数据可视化展示 | 基于148名学生的地理分布分析</p>
+        
+        <div class="chart-container">
+            <iframe src="student_distribution_heatmap_ME25-26.html" title="学生分布热力图"></iframe>
+        </div>
+        
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-number">22</div>
+                <div class="stat-label">覆盖高校数量</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">148</div>
+                <div class="stat-label">学生总数</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">44</div>
+                <div class="stat-label">最大生源校人数</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">29.7%</div>
+                <div class="stat-label">苏州大学占比</div>
+            </div>
+        </div>
+        
+        <div class="info-section">
+            <h3>🏫 高校生源排名</h3>
+            <div class="school-ranking">
+                <div class="school-item">
+                    <span class="rank">🥇 第1名</span><br>
+                    <span class="school-name">苏州大学</span>: <span class="count">44人 (29.7%)</span>
+                </div>
+                <div class="school-item">
+                    <span class="rank">🥈 第2名</span><br>
+                    <span class="school-name">华南理工大学</span>: <span class="count">21人 (14.2%)</span>
+                </div>
+                <div class="school-item">
+                    <span class="rank">🥉 第3名</span><br>
+                    <span class="school-name">北京交通大学</span>: <span class="count">15人 (10.1%)</span>
+                </div>
+                <div class="school-item">
+                    <span class="rank">4️⃣ 第4名</span><br>
+                    <span class="school-name">四川大学</span>: <span class="count">13人 (8.8%)</span>
+                </div>
+                <div class="school-item">
+                    <span class="rank">5️⃣ 第5名</span><br>
+                    <span class="school-name">湖南大学</span>: <span class="count">6人 (4.1%)</span>
+                </div>
+                <div class="school-item">
+                    <span class="rank">6️⃣ 第6名</span><br>
+                    <span class="school-name">上海大学</span>: <span class="count">5人 (3.4%)</span>
+                </div>
+            </div>
+            
+            <h4>📍 地理分布特点：</h4>
+            <ul>
+                <li>🌟 <strong>江苏省</strong>：苏州大学一枝独秀，占近30%</li>
+                <li>🌟 <strong>广东省</strong>：华南理工大学贡献突出</li>
+                <li>🌟 <strong>北京市</strong>：多所知名高校均有贡献</li>
+                <li>🌟 <strong>分布均衡</strong>：覆盖全国多个省市的重点高校</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html> 
